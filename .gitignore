@@ -4,8 +4,6 @@ Thumbs.db
 /eclipse
 /build
 /.gradle
-gradlew
-gradlew.bat
 gradle.properties
 *.iml
 *.ipr
