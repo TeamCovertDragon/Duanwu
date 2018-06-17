@@ -1,4 +1,4 @@
-package team.covertdragon.duanwu;
+package team.covertdragon.duanwu.Food;
 
 /**
  * Central manager of all zongzi-related objects.

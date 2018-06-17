@@ -1,4 +1,4 @@
-package team.covertdragon.duanwu;
+package team.covertdragon.duanwu.Food;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

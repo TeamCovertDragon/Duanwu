@@ -1,4 +1,4 @@
-package team.covertdragon.duanwu;
+package team.covertdragon.duanwu.Food;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.util.ITooltipFlag;
@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
+import team.covertdragon.duanwu.DuanwuConst;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -18,9 +19,10 @@ import java.util.List;
 
 public final class Zongzi extends ItemFood {
 
-    Zongzi() {
+    public Zongzi() {
         super(0, 0, false);
         this.setMaxStackSize(16);
+        this.setCreativeTab(DuanwuConst.DuanwuCreativeTab);
     }
 
     @Nonnull
