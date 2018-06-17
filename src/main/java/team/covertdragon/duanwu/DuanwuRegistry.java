@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = "duanwu")
-public class DuanwuRegistry {
+public final class DuanwuRegistry {
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {

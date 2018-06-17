@@ -16,8 +16,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class Zongzi extends ItemFood {
-    public Zongzi() {
+public final class Zongzi extends ItemFood {
+
+    Zongzi() {
         super(0, 0, false);
         this.setMaxStackSize(16);
     }
@@ -29,7 +30,7 @@ public class Zongzi extends ItemFood {
             EntityPlayer player = (EntityPlayer)entity;
             player.getFoodStats().addStats(0, 0F);
             worldIn.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
-            player.addStat(StatList.getObjectUseStats(this));
+            player.addStat(StatList.getObjectUseStats(this)); // TODO Keep or not
 
             if (player instanceof EntityPlayerMP) {
                 CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)player, stack);
@@ -51,5 +52,10 @@ public class Zongzi extends ItemFood {
         } else {
             tooltip.add("Press F3 + H to show flavor");
         }
+    }
+
+    @Override
+    protected final void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
+
     }
 }
