@@ -25,16 +25,13 @@ public class Zongzi extends ItemFood {
     @Nonnull
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entity) {
-        if (entity instanceof EntityPlayer)
-        {
+        if (entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer)entity;
             player.getFoodStats().addStats(0, 0F);
             worldIn.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
-            this.onFoodEaten(stack, worldIn, player);
             player.addStat(StatList.getObjectUseStats(this));
 
-            if (player instanceof EntityPlayerMP)
-            {
+            if (player instanceof EntityPlayerMP) {
                 CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)player, stack);
             }
         }
