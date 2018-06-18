@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "duanwu",
+    "name": "Duanwu",
+    "description": "Zongzi!!!!!!!!!!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "authorList": ["Team CovertDragon"],
+    "credits": "Those who suggest mooncake fillings and crusts!",
+    "screenshots": []
+  }
+]
