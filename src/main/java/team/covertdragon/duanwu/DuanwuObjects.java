@@ -6,6 +6,5 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder("duanwu")
 public final class DuanwuObjects {
-
     public static final Item ZONGZI = Items.AIR;
 }
