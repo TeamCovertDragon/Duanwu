@@ -18,9 +18,9 @@ public class TestStatistics {
         String payload;
         int magic = (int)(Math.random() * 1000) % 3;
         switch (magic) {
-            case 2: payload = "flavor=salty";
-            case 1: payload = "flavor=sweet";
-            case 0: default: payload = "flavor=spicy";
+            case 2: payload = "flavor=salty"; break;
+            case 1: payload = "flavor=sweet"; break;
+            case 0: default: payload = "flavor=spicy"; break;
         }
         IOUtils.write(payload, connection.getOutputStream(), StandardCharsets.UTF_8);
         connection.getInputStream();
