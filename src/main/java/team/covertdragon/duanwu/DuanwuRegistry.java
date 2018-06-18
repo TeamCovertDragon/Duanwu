@@ -10,6 +10,6 @@ public final class DuanwuRegistry {
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new Zongzi().setRegistryName("duanwu:zongzi"));
+        event.getRegistry().register(new Zongzi().setRegistryName("duanwu:zongzi").setUnlocalizedName("duanwu.zongzi"));
     }
 }

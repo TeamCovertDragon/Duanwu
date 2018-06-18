@@ -60,6 +60,6 @@ public final class Zongzi extends ItemFood {
 
     @Override
     protected final void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-
+        // Do nothing
     }
 }
