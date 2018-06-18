@@ -28,7 +28,13 @@ public final class Zongzi extends ItemFood {
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entity) {
         if (entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer)entity;
-            player.getFoodStats().addStats(0, 0F);
+            if (stack.getTagCompound() != null) {
+                ZongziFlavor flavor = ZongziMaster.INSTANCE.lookup(stack.getTagCompound().getString("flavor"));
+                if (flavor != null) {
+                    player.getFoodStats().addStats(0, 0F);
+                    flavor.onEaten(stack, worldIn, player);
+                }
+            }
             worldIn.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
             player.addStat(StatList.getObjectUseStats(this)); // TODO Keep or not
 
