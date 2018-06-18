@@ -14,4 +14,13 @@ public final class Duanwu {
         FluidRegistry.enableUniversalBucket();
     }
 
+    // Notice: we don't need SidedProxy this time.
+
+    public static final CreativeTabs DUANWU_GROUP = new CreativeTabs("duanwu") {
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(DuanwuObjects.ZONGZI);
+        }
+    };
+
 }
